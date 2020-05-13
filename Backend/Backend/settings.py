@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')  # Path to templates directory
 STATIC_DIR = os.path.join(BASE_DIR, 'static')  # path to static directory
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')  # path to media directory
 
 
 # Quick-start development settings - unsuitable for production
@@ -126,3 +127,7 @@ STATIC_URL = '/static/'
 # STATIC_DIR and STATICFILES_DIRS refers to the locations on your computer where static files are
 # stored. The final variable STATIC_URL then allows us to specify the URL with which static files can
 # be accessed when we run our Django development server.
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')  # django folder that takes all static files given and puts it in a
+# django folder which is user given
+MEDIA_URL = '/media/'
+MEDIA_ROOT = MEDIA_DIR
