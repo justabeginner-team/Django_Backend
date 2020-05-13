@@ -9,4 +9,7 @@ class Destination(models.Model):
     description = models.TextField()
     offer = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.name
+
 #  this model works by adding destination points using django admin
